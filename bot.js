@@ -4,7 +4,7 @@ const prefix = '.'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
+client.user.setGame(`viking-world`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -37,7 +37,7 @@ client.login(process.env.BOT_TOKEN);
 client.on('message',async message => {
   if(message.author.bot || message.channel.type === '$Fivebc') return;
   let args = message.content.split(' ');
-  if(args[0] === `$Fivebc`) {
+  if(args[0] === `#bc`) {
     if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send('- **أنت لا تملك الصلاحيات اللازمة لأستخدام هذا الأمر**');
     if(!args[1]) return message.channel.send('- **يجب عليك كتابة الرسالة بعد الأمر**');
   
